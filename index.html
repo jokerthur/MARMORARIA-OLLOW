@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Marmoraria Ollow - Luxo em Mármore</title>
+    <meta name="description" content="Marmoraria Ollow - Escadas de prédio, bancadas, pias e revestimentos em mármore premium. Projetos luxuosos com medidas personalizadas e orçamentos. Capanema, PR." />
+    <meta name="keywords" content="marmoraria, mármore, bancadas, pias, escadas, capanema, paraná" />
+    <meta name="author" content="Marmoraria Ollow" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        /* Design: Minimalismo Sofisticado com Tipografia Ousada */
+        /* Paleta: Branco + Cinza Escuro + Ouro Quente */
+        --primary: #C9A961;
+        --background: #F8F7F5;
+        --foreground: #1A1A1A;
+        --card: #FFFFFF;
+        --border: #E8E8E8;
+        --muted: #6B6B6B;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--background);
+        color: var(--foreground);
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+      }
+
+      h2 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+      }
+
+      h3 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+      }
+
+      p {
+        line-height: 1.7;
+        font-weight: 300;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button, input, select, textarea {
+        font-family: 'Lato', sans-serif;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      @media (min-width: 640px) {
+        .container {
+          padding: 0 1.5rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          padding: 0 2rem;
+        }
+      }
+
+      /* Componentes */
+      .btn-gold {
+        padding: 0.75rem 2rem;
+        background-color: var(--primary);
+        color: white;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        transform: scale(1);
+      }
+
+      .btn-gold:hover {
+        background-color: #B8985A;
+        transform: scale(1.05);
+      }
+
+      .btn-gold:active {
+        transform: scale(0.95);
+      }
+
+      .section-spacing {
+        padding: 4rem 0;
+      }
+
+      @media (min-width: 768px) {
+        .section-spacing {
+          padding: 6rem 0;
+        }
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fade-in 0.8s ease-out;
+      }
+
+      .divider-gold {
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--primary), transparent);
+        margin: 2rem 0;
+      }
+
+      /* Header */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background-color: var(--background);
+        border-bottom: 1px solid var(--border);
+      }
+
+      header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 1rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .logo-box {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+      }
+
+      nav {
+        display: none;
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        nav {
+          display: flex;
+        }
+      }
+
+      nav a {
+        color: var(--foreground);
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: var(--primary);
+      }
+
+      /* Hero Section */
+      .hero {
+        position: relative;
+        height: 100vh;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/kitchen-marble-1-63vtKi7kFBK38Jb5wUrtbx.webp');
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+      }
+
+      .hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: -1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 10;
+        color: white;
+        animation: fade-in 0.8s ease-out;
+      }
+
+      .hero h1 {
+        margin-bottom: 1.5rem;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        font-weight: 300;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-buttons button {
+        padding: 0.75rem 2rem;
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      .btn-secondary:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .chevron-down {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        50% {
+          transform: translateX(-50%) translateY(10px);
+        }
+      }
+
+      /* Diferenciais */
+      .diferenciais {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .diferencial-card {
+        text-align: center;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .diferencial-card:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .diferencial-icon {
+        width: 4rem;
+        height: 4rem;
+        background-color: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      /* Serviços */
+      .servicos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .servico-card {
+        padding: 2rem;
+        border: 1px solid var(--border);
+        transition: all 0.3s ease;
+      }
+
+      .servico-card:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .servico-icon {
+        width: 3rem;
+        height: 3rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .servico-card h3 {
+        margin-bottom: 1rem;
+      }
+
+      .servico-card p {
+        color: var(--muted);
+        margin-bottom: 1rem;
+      }
+
+      .servico-list {
+        list-style: none;
+        font-size: 0.875rem;
+        color: var(--muted);
+      }
+
+      .servico-list li {
+        margin-bottom: 0.5rem;
+      }
+
+      /* Galeria */
+      .galeria-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .galeria-item {
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .galeria-item:hover {
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        transform: scale(1.05);
+      }
+
+      .galeria-item img {
+        width: 100%;
+        height: 16rem;
+        object-fit: cover;
+        display: block;
+      }
+
+      .galeria-info {
+        padding: 1rem;
+        background-color: var(--background);
+      }
+
+      .galeria-category {
+        font-size: 0.75rem;
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .galeria-title {
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: var(--foreground);
+      }
+
+      /* Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+
+      .modal.active {
+        display: flex;
+        animation: fade-in 0.3s ease-out;
+      }
+
+      .modal-content {
+        position: relative;
+        max-width: 90vw;
+        max-height: 90vh;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: -3rem;
+        right: 0;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      .modal-close:hover {
+        color: var(--primary);
+      }
+
+      .modal img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+      }
+
+      /* Mármores */
+      .marmores-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .marmore-card {
+        overflow: hidden;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .marmore-card:hover {
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .marmore-card img {
+        width: 100%;
+        height: 16rem;
+        object-fit: cover;
+      }
+
+      .marmore-info {
+        padding: 1.5rem;
+        background-color: white;
+      }
+
+      .marmore-info h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .marmore-info p {
+        color: var(--muted);
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+      }
+
+      .marmore-color {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .marmore-swatch {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        border: 2px solid var(--border);
+      }
+
+      /* Depoimentos */
+      .depoimentos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .depoimento-card {
+        padding: 2rem;
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .depoimento-card:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .stars {
+        display: flex;
+        gap: 0.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .star {
+        color: var(--primary);
+        font-size: 1.25rem;
+      }
+
+      .depoimento-text {
+        color: var(--muted);
+        margin-bottom: 1rem;
+        font-style: italic;
+      }
+
+      .depoimento-author {
+        font-weight: bold;
+        color: var(--foreground);
+        margin-bottom: 0.25rem;
+      }
+
+      .depoimento-role {
+        font-size: 0.875rem;
+        color: var(--muted);
+      }
+
+      /* Formulário */
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group label {
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--foreground);
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 0.75rem;
+        border: 1px solid var(--border);
+        background-color: white;
+        color: var(--foreground);
+        transition: all 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 8rem;
+      }
+
+      .form-submit {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.125rem;
+      }
+
+      /* Contato Info */
+      .contato-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 4rem;
+        padding-top: 4rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .contato-item {
+        text-align: center;
+      }
+
+      .contato-icon {
+        width: 3rem;
+        height: 3rem;
+        margin: 0 auto 1rem;
+        color: var(--primary);
+      }
+
+      .contato-item h4 {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+
+      .contato-item p {
+        color: var(--muted);
+      }
+
+      /* WhatsApp Button */
+      .whatsapp-btn {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: #25D366;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .whatsapp-btn:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        transform: scale(1.1);
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--foreground);
+        color: white;
+        padding: 3rem 0 1rem;
+      }
+
+      footer .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      footer h4 {
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      footer p {
+        color: #B0B0B0;
+        font-size: 0.95rem;
+      }
+
+      footer ul {
+        list-style: none;
+      }
+
+      footer ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      footer a {
+        color: #B0B0B0;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: var(--primary);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #333333;
+        padding-top: 2rem;
+        text-align: center;
+        color: #B0B0B0;
+        font-size: 0.875rem;
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        .hero {
+          height: auto;
+          min-height: 500px;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+        }
+
+        .hero-buttons button {
+          width: 100%;
+        }
+
+        .section-spacing {
+          padding: 2rem 0;
+        }
+
+        .whatsapp-btn {
+          bottom: 1rem;
+          right: 1rem;
+          width: 3rem;
+          height: 3rem;
+          font-size: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <div class="logo-box"></div>
+          <span>Marmoraria Ollow</span>
+        </div>
+        <nav>
+          <a href="#servicos">Serviços</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#marmores">Mármores</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Luxo em Mármore</h1>
+          <p>Escadas, bancadas, pias e muito mais. Qualidade premium para sua casa ou negócio</p>
+          <div class="hero-buttons">
+            <button class="btn-gold" onclick="openWhatsApp()">Solicitar Orçamento</button>
+            <button class="btn-secondary">Ver Projetos</button>
+          </div>
+        </div>
+      </div>
+      <div class="chevron-down">↓</div>
+    </section>
+
+    <div class="divider-gold"></div>
+
+    <!-- Diferenciais -->
+    <section class="section-spacing">
+      <div class="container">
+        <h2>Por que escolher a Marmoraria Ollow?</h2>
+        <div style="width: 5rem; height: 0.25rem; background-color: var(--primary); margin: 1rem 0 3rem;"></div>
+        <div class="diferenciais">
+          <div class="diferencial-card">
+            <div class="diferencial-icon">✓</div>
+            <h3>Qualidade Premium</h3>
+            <p>Apenas mármores naturais de primeira qualidade</p>
+          </div>
+          <div class="diferencial-card">
+            <div class="diferencial-icon">✓</div>
+            <h3>Profissionalismo</h3>
+            <p>Equipe experiente com anos de trajetória</p>
+          </div>
+          <div class="diferencial-card">
+            <div class="diferencial-icon">✓</div>
+            <h3>Preços Justos</h3>
+            <p>Melhor custo-benefício do mercado</p>
+          </div>
+          <div class="diferencial-card">
+            <div class="diferencial-icon">✓</div>
+            <h3>Garantia</h3>
+            <p>Garantia em todos os trabalhos realizados</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-gold"></div>
+
+    <!-- Serviços -->
+    <section id="servicos" class="section-spacing" style="background-color: white;">
+      <div class="container">
+        <h2>Nossos Serviços</h2>
+        <div style="width: 5rem; height: 0.25rem; background-color: var(--primary); margin: 1rem 0 3rem;"></div>
+        <div class="servicos-grid">
+          <div class="servico-card">
+            <div class="servico-icon"></div>
+            <h3>Escadas de Prédio</h3>
+            <p>Escadas em mármore premium com design elegante e acabamento impecável.</p>
+            <ul class="servico-list">
+              <li>✓ Mármore natural</li>
+              <li>✓ Acabamento polido</li>
+              <li>✓ Instalação profissional</li>
+            </ul>
+          </div>
+          <div class="servico-card">
+            <div class="servico-icon"></div>
+            <h3>Bancadas</h3>
+            <p>Bancadas para cozinha e banheiro em diversos tipos de mármore.</p>
+            <ul class="servico-list">
+              <li>✓ Cozinha e banheiro</li>
+              <li>✓ Medidas personalizadas</li>
+              <li>✓ Variedade de cores</li>
+            </ul>
+          </div>
+          <div class="servico-card">
+            <div class="servico-icon"></div>
+            <h3>Pias e Cubas</h3>
+            <p>Pias de banheiro e cozinha em mármore com designs modernos.</p>
+            <ul class="servico-list">
+              <li>✓ Pia simples e dupla</li>
+              <li>✓ Cuba integrada</li>
+              <li>✓ Acabamento premium</li>
+            </ul>
+          </div>
+          <div class="servico-card">
+            <div class="servico-icon"></div>
+            <h3>Revestimentos</h3>
+            <p>Revestimentos em mármore para paredes, cozinhas e banheiros.</p>
+            <ul class="servico-list">
+              <li>✓ Placas de mármore</li>
+              <li>✓ Acabamento polido</li>
+              <li>✓ Instalação incluída</li>
+            </ul>
+          </div>
+          <div class="servico-card">
+            <div class="servico-icon"></div>
+            <h3>Pisos</h3>
+            <p>Pisos em mármore para ambientes internos e externos.</p>
+            <ul class="servico-list">
+              <li>✓ Mármore natural</li>
+              <li>✓ Antiderrapante</li>
+              <li>✓ Fácil limpeza</li>
+            </ul>
+          </div>
+          <div class="servico-card">
+            <div class="servico-icon"></div>
+            <h3>Outros Serviços</h3>
+            <p>Manutenção, polimento, restauração e serviços especializados.</p>
+            <ul class="servico-list">
+              <li>✓ Polimento e lustro</li>
+              <li>✓ Reparos e restauração</li>
+              <li>✓ Manutenção periódica</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-gold"></div>
+
+    <!-- Galeria -->
+    <section id="galeria" class="section-spacing" style="background-color: white;">
+      <div class="container">
+        <h2>Galeria de Projetos</h2>
+        <div style="width: 5rem; height: 0.25rem; background-color: var(--primary); margin: 1rem 0 3rem;"></div>
+        <div class="galeria-grid" id="galeria-grid">
+          <!-- Galeria será preenchida por JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Galeria -->
+    <div class="modal" id="modal-galeria">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <img id="modal-image" src="" alt="" />
+        <div style="color: white; text-align: center; margin-top: 1rem;">
+          <p style="color: var(--primary); font-weight: 600;" id="modal-category"></p>
+          <h3 id="modal-title"></h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-gold"></div>
+
+    <!-- Mármores -->
+    <section id="marmores" class="section-spacing">
+      <div class="container">
+        <h2>Tipos de Mármore</h2>
+        <div style="width: 5rem; height: 0.25rem; background-color: var(--primary); margin: 1rem 0 3rem;"></div>
+        <div class="marmores-grid" id="marmores-grid">
+          <!-- Mármores serão preenchidos por JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-gold"></div>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="section-spacing" style="background-color: white;">
+      <div class="container">
+        <h2>Depoimentos de Clientes</h2>
+        <div style="width: 5rem; height: 0.25rem; background-color: var(--primary); margin: 1rem 0 3rem;"></div>
+        <div class="depoimentos-grid" id="depoimentos-grid">
+          <!-- Depoimentos serão preenchidos por JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-gold"></div>
+
+    <!-- Contato -->
+    <section id="contato" class="section-spacing">
+      <div class="container" style="max-width: 900px;">
+        <h2>Solicitar Orçamento</h2>
+        <div style="width: 5rem; height: 0.25rem; background-color: var(--primary); margin: 1rem 0 3rem;"></div>
+
+        <form id="contato-form" onsubmit="handleSubmit(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Nome Completo</label>
+              <input type="text" id="name" name="name" required placeholder="Seu nome" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="phone">Telefone</label>
+              <input type="tel" id="phone" name="phone" required placeholder="(46) 99999-9999" />
+            </div>
+            <div class="form-group">
+              <label for="service">Tipo de Serviço</label>
+              <select id="service" name="service" required>
+                <option value="bancadas">Bancadas</option>
+                <option value="escadas">Escadas de Prédio</option>
+                <option value="pias">Pias e Cubas</option>
+                <option value="revestimentos">Revestimentos</option>
+                <option value="pisos">Pisos</option>
+                <option value="outros">Outros Serviços</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" required placeholder="Descreva seu projeto e necessidades..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-gold form-submit">Solicitar Orçamento</button>
+        </form>
+
+        <div class="contato-info">
+          <div class="contato-item">
+            <div class="contato-icon">📞</div>
+            <h4>Telefone</h4>
+            <p>(46) 3552-1664</p>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon">✉️</div>
+            <h4>Email</h4>
+            <p>marmoollow@gmail.com</p>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon">📍</div>
+            <h4>Localização</h4>
+            <p>Av. Rio Grande do Sul, 3071<br />Capanema, PR</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <h4>Marmoraria Ollow</h4>
+        <p>Luxo em mármore. Escadas, bancadas, pias e muito mais com qualidade premium.</p>
+      </div>
+      <div class="container">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Escadas de Prédio</a></li>
+          <li><a href="#servicos">Bancadas</a></li>
+          <li><a href="#servicos">Pias e Cubas</a></li>
+          <li><a href="#servicos">Revestimentos</a></li>
+        </ul>
+      </div>
+      <div class="container">
+        <h4>Contato</h4>
+        <ul>
+          <li>(46) 3552-1664</li>
+          <li>marmoollow@gmail.com</li>
+          <li>Av. Rio Grande do Sul, 3071</li>
+          <li>Capanema, PR</li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Marmoraria Ollow. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <button class="whatsapp-btn" onclick="openWhatsApp()" title="Enviar mensagem pelo WhatsApp">💬</button>
+
+    <script>
+      // Dados da Galeria
+      const galleryImages = [
+        {
+          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-stairs-elegant-BRRY5jsiRZwxLeH5HPeHmB.webp",
+          title: "Escada Elegante em Mármore",
+          category: "Escadas"
+        },
+        {
+          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/kitchen-marble-1-63vtKi7kFBK38Jb5wUrtbx.webp",
+          title: "Cozinha Moderna",
+          category: "Cozinhas"
+        },
+        {
+          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-wall-revestimento-Q5RKsYHdXCe4UCX2afQyoY.webp",
+          title: "Revestimento em Parede",
+          category: "Revestimentos"
+        },
+        {
+          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-floor-premium-WG7MkHrd8aZZjq5v8ZHgBp.webp",
+          title: "Piso Premium",
+          category: "Pisos"
+        },
+        {
+          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/kitchen-marble-2-hKjLiQoajTF25nLwrVMfww.webp",
+          title: "Cozinha Sofisticada",
+          category: "Cozinhas"
+        },
+        {
+          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/bathroom-sink-1-F3ExpDDzXBwddqoc6RXch8.webp",
+          title: "Pia Dupla",
+          category: "Pias"
+        }
+      ];
+
+      // Dados dos Mármores
+      const marbleTypes = [
+        {
+          name: "Mármore Carrara",
+          description: "Branco puro com veios cinzas. Clássico e elegante.",
+          image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-types-showcase-gFnWYG2hAYYiDPiDSrbKam.webp",
+          color: "#F5F5F0"
+        },
+        {
+          name: "Nero Marquina",
+          description: "Preto profundo com veios brancos. Sofisticado e moderno.",
+          image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-types-showcase-gFnWYG2hAYYiDPiDSrbKam.webp",
+          color: "#1A1A1A"
+        },
+        {
+          name: "Travertino Bege",
+          description: "Tom quente e natural. Perfeito para ambientes aconchegantes.",
+          image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-types-showcase-gFnWYG2hAYYiDPiDSrbKam.webp",
+          color: "#D4C5B0"
+        }
+      ];
+
+      // Dados dos Depoimentos
+      const testimonials = [
+        {
+          name: "Maria Silva",
+          role: "Dona de casa - São Paulo",
+          text: "A bancada de mármore ficou perfeita! Profissionalismo do início ao fim. Recomendo muito!",
+          rating: 5
+        },
+        {
+          name: "João Santos",
+          role: "Empresário - Capanema",
+          text: "Escada de prédio impecável. Qualidade excepcional e entrega no prazo. Muito satisfeito!",
+          rating: 5
+        },
+        {
+          name: "Ana Costa",
+          role: "Arquiteta - Paraná",
+          text: "Parceria perfeita com a Marmoraria Ollow. Sempre entregam com excelência.",
+          rating: 5
+        }
+      ];
+
+      // Renderizar Galeria
+      function renderGallery() {
+        const galeria = document.getElementById('galeria-grid');
+        galeria.innerHTML = galleryImages.map((img, index) => `
+          <div class="galeria-item" onclick="openModal(${index})">
+            <img src="${img.src}" alt="${img.title}" />
+            <div class="galeria-info">
+              <div class="galeria-category">${img.category}</div>
+              <div class="galeria-title">${img.title}</div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Renderizar Mármores
+      function renderMarbles() {
+        const marmores = document.getElementById('marmores-grid');
+        marmores.innerHTML = marbleTypes.map(marble => `
+          <div class="marmore-card">
+            <img src="${marble.image}" alt="${marble.name}" />
+            <div class="marmore-info">
+              <h3>${marble.name}</h3>
+              <p>${marble.description}</p>
+              <div class="marmore-color">
+                <div class="marmore-swatch" style="background-color: ${marble.color};"></div>
+                <span>Cor: ${marble.color}</span>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Renderizar Depoimentos
+      function renderTestimonials() {
+        const depoimentos = document.getElementById('depoimentos-grid');
+        depoimentos.innerHTML = testimonials.map(test => `
+          <div class="depoimento-card">
+            <div class="stars">
+              ${Array(test.rating).fill('⭐').join('')}
+            </div>
+            <p class="depoimento-text">"${test.text}"</p>
+            <div class="depoimento-author">${test.name}</div>
+            <div class="depoimento-role">${test.role}</div>
+          </div>
+        `).join('');
+      }
+
+      // Modal Functions
+      function openModal(index) {
+        const modal = document.getElementById('modal-galeria');
+        const img = galleryImages[index];
+        document.getElementById('modal-image').src = img.src;
+        document.getElementById('modal-category').textContent = img.category;
+        document.getElementById('modal-title').textContent = img.title;
+        modal.classList.add('active');
+      }
+
+      function closeModal() {
+        document.getElementById('modal-galeria').classList.remove('active');
+      }
+
+      // WhatsApp
+      function openWhatsApp() {
+        const message = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para a Marmoraria Ollow.");
+        window.open(`https://wa.me/554635521664?text=${message}`, "_blank");
+      }
+
+      // Form Submit
+      function handleSubmit(event) {
+        event.preventDefault();
+        alert("Obrigado! Entraremos em contato em breve.");
+        document.getElementById('contato-form').reset();
+      }
+
+      // Inicializar
+      document.addEventListener('DOMContentLoaded', () => {
+        renderGallery();
+        renderMarbles();
+        renderTestimonials();
+      });
+
+      // Fechar modal ao clicar fora
+      document.getElementById('modal-galeria')?.addEventListener('click', (e) => {
+        if (e.target.id === 'modal-galeria') closeModal();
+      });
+    </script>
+  </body>
+
+</html>
