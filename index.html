@@ -1038,7 +1038,7 @@
           category: "Pisos"
         },
         {
-          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/kitchen-marble-2-hKjLiQoajTF25nLwrVMfww.webp",
+          src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663175874071/ESuLJcPsjPURqcfz.png",
           title: "Cozinha Sofisticada",
           category: "Cozinhas"
         },
@@ -1046,6 +1046,31 @@
           src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/bathroom-sink-1-F3ExpDDzXBwddqoc6RXch8.webp",
           title: "Pia Dupla",
           category: "Pias"
+        },
+        {
+          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-kitchen-ocre-LxwimUcy4xzAcQm2pspiLc.webp",
+          title: "Cozinha em Ocre",
+          category: "Cozinhas"
+        },
+        {
+          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-bathroom-green-2KSuTiEDPe5JdVPF9eYWk5.webp",
+          title: "Banheiro Verde Sofisticado",
+          category: "Banheiros"
+        },
+        {
+          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-kitchen-warm-tones-eYNNENeJvPiX2Erf2TaHsM.webp",
+          title: "Cozinha Tons Quentes",
+          category: "Cozinhas"
+        },
+        {
+          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-bathroom-neutral-CpcjHVGixxcxHkgSbZV2ML.webp",
+          title: "Banheiro Neutro Luxuoso",
+          category: "Banheiros"
+        },
+        {
+          src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-kitchen-earth-tones-jZv49ZarUHxwewHy8rqk2L.webp",
+          title: "Cozinha Tons Terra",
+          category: "Cozinhas"
         }
       ];
 
@@ -1068,6 +1093,36 @@
           description: "Tom quente e natural. Perfeito para ambientes aconchegantes.",
           image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-types-showcase-gFnWYG2hAYYiDPiDSrbKam.webp",
           color: "#D4C5B0"
+        },
+        {
+          name: "Granito Preto Sao Gabriel",
+          description: "Granito preto intenso com acabamento polido. Duravel e sofisticado.",
+          image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-types-showcase-gFnWYG2hAYYiDPiDSrbKam.webp",
+          color: "#0D0D0D"
+        },
+        {
+          name: "Granito Branco Marfim",
+          description: "Granito branco com veios delicados. Elegante e atemporal.",
+          image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-types-showcase-gFnWYG2hAYYiDPiDSrbKam.webp",
+          color: "#F0EDE8"
+        },
+        {
+          name: "Granito Vermelho Brasilia",
+          description: "Granito vermelho vibrante com tons quentes. Impactante e luxuoso.",
+          image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-types-showcase-gFnWYG2hAYYiDPiDSrbKam.webp",
+          color: "#A52A2A"
+        },
+        {
+          name: "Granito Cinza Corumba",
+          description: "Granito cinza com padrao uniforme. Moderno e versatil.",
+          image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-types-showcase-gFnWYG2hAYYiDPiDSrbKam.webp",
+          color: "#7A7A7A"
+        },
+        {
+          name: "Granito Verde Ubatuba",
+          description: "Granito verde escuro com brilho natural. Elegante e exclusivo.",
+          image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/BGwCVFif8QgZQngCjbMdp5/marble-types-showcase-gFnWYG2hAYYiDPiDSrbKam.webp",
+          color: "#2D5A3D"
         }
       ];
 
@@ -1156,8 +1211,21 @@
 
       // WhatsApp
       function openWhatsApp() {
-        const message = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para a Marmoraria Ollow.");
-        window.open(`https://wa.me/554635521664?text=${message}`, "_blank");
+        const phoneNumber = "5546988064376";
+        const message = encodeURIComponent("Boa tarde! Quero fazer um orçamento.");
+        // Tenta primeiro com wa.me, se não funcionar tenta com WhatsApp Desktop
+        const waLink = `https://wa.me/${phoneNumber}?text=${message}`;
+        const waDesktopLink = `whatsapp://send?phone=${phoneNumber}&text=${message}`;
+        
+        // Tenta abrir com wa.me primeiro
+        window.open(waLink, "_blank");
+        
+        // Se wa.me não funcionar, tenta WhatsApp Desktop após 1 segundo
+        setTimeout(() => {
+          if (!window.closed) {
+            window.location.href = waDesktopLink;
+          }
+        }, 1000);
       }
 
       // Form Submit
